@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #203644" >
+    <span class="navbar-brand">
+
+            <img src="assets/Logo.JPG" alt="logo"
+                height = "60" width = "150" > 
+          </span>
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="/" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/popular" class="nav-link">Efficient Alternatives</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/consumption" class="nav-link">Common Items</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/calculator" class="nav-link">Energy Calculator</a>
+        </li>
+     
+    </ul>
+
+    <div class form action="#" method="get">
+        
+        <input type="text" id="search" name="search" placeholder="Search...">
+        <button type="submit">Go</button>
+    </div>
+
+    <div class="form-inline ms-auto"
+        style = "margin-right: 40px">
+        <ng-container
+    *ngIf = "authService.isAuthenticated$ | async ;
+    else loggedOut">
+    <button class="btn btn-outline-light"
+            (click) = "authService.logout()">
+    Logout
+</button>
+
+
+</ng-container>
+
+<ng-template #loggedOut>
+    <button class="btn btn-outline-light"
+            (click) = "authService.loginWithRedirect()">
+    Login
+    </button>
+</ng-template>
+
+</div>
+
+    

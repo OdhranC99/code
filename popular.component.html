@@ -1,0 +1,58 @@
+
+
+
+<!-- The following is a placeholder to indicate what the final product will display as I am currently having issues displaying the data from the database-->
+
+<div class="container" style="margin-top: 125px;">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div *ngFor = "let appliance of appliance_list | async">
+                    <div class="card text-white bg-info mb-3"
+                    
+                        style = "cursor: pointer"
+                        [routerLink]="['/popular', appliance._id]">
+                        <div class="card-header">
+                            {{ appliance.Name}}
+
+                        </div>
+                        <div class="card-body">
+                            
+                                Consumption (kw/hr)
+                                {{ appliance.Consumption }}
+                               
+                        </div>
+                        <div class="card-footer">
+                            Cost to run (£/hr)
+                            {{ appliance.Cost }}
+                        </div>
+                </div>
+            </div>
+        </div> <!-- col -->
+    </div> <!-- row -->
+</div> <!-- container -->
+
+<div class="row">
+    <div class="col-sm-6">
+        <button class="btn btn-primary"
+                (click)="previousPage()">
+            Previous
+            </button>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 text-end">
+            <button class="btn btn-primary"
+                    (click)="nextPage()">
+                Next
+                </button>
+        </div>
+
+
+        
+</div>
+
+
+
+
+

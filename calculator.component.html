@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ 
+ 
+<body>
+    
+  
+
+    <div class="text-center" >
+      
+
+        <h1>Use our calculator to work out the cost of running your appliances - You can find common appliance wattage on our consumption page!</h1>
+
+        <form>
+          <label for="value1">Enter Appliance Name: </label>
+          <input type="text" id="value1" name="value1">
+          <br>
+          <label for="value2">Enter Appliance Wattage (kW): </label>
+          <input type="text" id="value2" name="value2">
+          <br><br>
+          <label for="value3">Enter Approx Hours Used: </label>
+          <input type="text" id="value3" name="value3">
+          <br><br>
+          <input type="button" value="Calculate" onclick="multiplyValues()">
+          <br><br>
+          <label for="result">Cost (£) :</label>
+          <input type="text" id="result" name="result" readonly>
+        </form>
+        
+        <script>
+          function multiplyValues() {
+            var value2 = document.getElementById("value2").value;
+            var value3 = document.getElementById("value3").value;
+            var result = (value2 * value3) * 0.34;
+            document.getElementById("result").value = result;
+          }
+        </script>
+        
+          
+          
+          
+          
+          
+
+<h2>
+    
+   Please avail of our free energy calculator above!
+
+    
+</h2>
+            
+           
+</div>
+
+    
+</body>
+ 
+</html>
